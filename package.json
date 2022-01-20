@@ -1,0 +1,19 @@
+{
+  "name": "munyama_1_01-20-22",
+  "version": "1.0.0",
+  "description": "Openclassroom project 2",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swavey4/Munyama_1_01-20-22.git"
+  },
+  "author": "Gibbor Munyama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swavey4/Munyama_1_01-20-22/issues"
+  },
+  "homepage": "https://github.com/swavey4/Munyama_1_01-20-22#readme"
+}
