@@ -1,2 +1,4 @@
-@use './Components/header';
+
 @use './Base/base';
+@use './Layout/header';
+@use './Components/components.scss';

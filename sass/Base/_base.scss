@@ -3,3 +3,12 @@
 .container{
     width: 100%;
 }
+
+h1,h2,p{
+    @include margin-clear;
+}
+
+a{
+    text-decoration: none;
+    
+}

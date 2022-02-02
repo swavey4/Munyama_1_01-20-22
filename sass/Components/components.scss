@@ -1,0 +1,65 @@
+@use '../Utils/index' as *; 
+
+// PRIMARY BUTTON
+.btn {
+    @include primary-btn; 
+
+    &__text{
+        color: #fff;
+        font-weight: 600;
+    }
+}
+
+
+// INTERACTION BTN
+.interaction{
+    @include center-element(center, flex-start, column);
+    width: 100%;
+    gap: 1.5rem;
+
+    &__btn{
+        border-radius: 25px;
+        height: 4.75rem;
+        background-color: $light-grey;
+        box-shadow:  4px 4px 9px 1px $dark-grey;
+        width: 100%;
+        @include center-element(center,flex-start)
+    }
+
+}
+
+// RESTAURANT-CARD
+
+.rest-card{
+    border-radius: 15px 15px 15px 15px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: $primary-shadow;
+
+    &__img{
+        height: 10.87rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    &__container{
+        @include center-element(center, flex-start);
+        padding: 0 22px 0 14px;
+        justify-content: space-between;
+
+        &-text{
+            margin: 11px 0;
+
+            p{
+                color: black;
+                margin-top: 3px;
+            }
+        }
+
+        &-icon{
+            color: black;
+            font-size: 1.5rem;
+        }
+    }
+}

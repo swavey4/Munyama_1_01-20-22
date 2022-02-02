@@ -1,0 +1,22 @@
+@use 'variables' as * ;
+// CENTER ELEMENT
+@mixin center-element($align: center, $justify: center, $direction: row){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin margin-clear{
+    margin: 0;
+}
+
+@mixin primary-btn($width: 13.6rem){
+    @include center-element;
+    background: rgb(147,86,220);
+    background: linear-gradient(350deg, rgb(162, 109, 226) 9%, rgba(255,121,218,1) 100%);
+    border-radius: 30px;
+    height: 3.12rem; 
+    width: $width;
+    box-shadow: $primary-shadow;
+}
