@@ -63,3 +63,19 @@
         }
     }
 }
+
+
+.dish{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow:  2px 5px 15px #d8d8d8;
+
+    >div{
+        @include center-element(strecth, flex-start);
+        justify-content: space-between;
+        margin-top: 0.25rem;
+    }
+}

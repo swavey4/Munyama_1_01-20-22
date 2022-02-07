@@ -75,3 +75,54 @@
         color: #fff;
     }
 }
+
+.menu-page{
+    width: 100%;
+    background-color: $light-grey;
+    padding-bottom: 5.12rem;
+    
+
+    &__image{
+        width: 100%;
+        height: 16rem;
+        object-fit: cover;
+        // position: relative;
+    }
+
+    &__container{
+        background-color: $light-grey;
+        padding: 2.3rem 1.25rem 0 1.25rem;
+        position: relative;
+        bottom: 45px;
+        z-index: 2;
+        border-radius: 35px 35px 0 0;
+
+
+    }
+}
+
+.menu{
+    margin-top: 2.6rem;
+    
+
+    &__container{
+        @include center-element(stretch, flex-start, column);
+        margin-top: 0.75rem;
+        gap: 0.75rem;
+    }
+
+    &__title{
+
+        >div{
+            background-color: $tetiary-color;
+            width: 2.5rem;
+            height: 0.2rem;
+            margin-top: 0.50rem;
+        }
+    }
+
+    &__btn{
+        @include primary-btn(11.62rem);
+        margin: 0 auto;
+    }
+}
