@@ -18,12 +18,44 @@
     gap: 1.5rem;
 
     &__btn{
+        box-sizing: border-box;
         border-radius: 25px;
         height: 4.75rem;
         background-color: $light-grey;
         box-shadow:  4px 4px 9px 1px $dark-grey;
         width: 100%;
-        @include center-element(center,flex-start)
+        @include center-element(center,flex-start);
+        padding-left: 2rem;
+        position: relative;
+        font-weight: 500;
+
+        div:nth-child(1){
+            @include center-element;
+            background-color: $primary-color;
+            height: 1.75rem;
+            width: 1.75rem;
+            border-radius: 100px;
+            color: white;
+            font-size: 0.75rem;
+            position: absolute;
+            left: -12px;
+        }
+
+        .icon{
+            margin-right: 1.75rem;
+            color: #bbbbbb;
+        }
+
+        .burger-menu{
+            margin-right: 1.75rem;
+            color: #bbbbbb;
+            font-size: 0;
+
+            i{
+                font-size: 0.75rem;
+                white-space: pre-wrap;
+            }
+        }
     }
 
 }
@@ -54,7 +86,13 @@
             p{
                 color: black;
                 margin-top: 3px;
+                font-weight: 500;
             }
+
+            p:nth-child(2){
+                font-weight: 100;
+            }
+
         }
 
         &-icon{
@@ -72,10 +110,18 @@
     background-color: #fff;
     border-radius: 15px;
     box-shadow:  2px 5px 15px #d8d8d8;
+    font-family: $text-font;
+    font-weight: 500;
 
     >div{
         @include center-element(strecth, flex-start);
         justify-content: space-between;
         margin-top: 0.25rem;
+        font-weight: 100;
+
+        span{
+            font-weight: 500;
+            color: $darker-grey;
+        }
     }
 }

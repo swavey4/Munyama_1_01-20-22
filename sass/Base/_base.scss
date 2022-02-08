@@ -1,7 +1,12 @@
 @use '../Utils' as *; 
 
+body{
+    font-family: $text-font;
+}
+
 .container{
     width: 100%;
+    max-width: 100%;
 }
 
 h1,h2,p{
@@ -11,4 +16,11 @@ h1,h2,p{
 a{
     text-decoration: none;
     
+}
+
+.burger-menu{
+    
+    i{
+        margin: 0;
+    }
 }
