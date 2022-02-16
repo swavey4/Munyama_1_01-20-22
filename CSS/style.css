@@ -229,14 +229,22 @@ a {
 .dish {
   box-sizing: border-box;
   width: 100%;
+  height: 68px;
   padding: 0.75rem 1.5rem 0.75rem 0.75rem;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 2px 5px 15px #d8d8d8;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 }
-.dish > div {
+.dish .dish__container {
+  width: 100%;
+  flex-shrink: 0;
+}
+.dish .sub-para {
   display: flex;
   align-items: strecth;
   justify-content: flex-start;
@@ -245,9 +253,41 @@ a {
   margin-top: 0.25rem;
   font-weight: 100;
 }
-.dish > div span {
+.dish .sub-para span {
   font-weight: 500;
   color: #353535;
+}
+.dish .checker {
+  background-color: #99E2D0;
+  width: 59px;
+  height: 68px;
+  margin: -0.75rem -1.5rem -0.75rem 0px;
+  border-radius: 0 15px 15px 0;
+  transform: translateX(200%);
+  transition: transform 500ms ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.dish .checker .fa-check-circle {
+  font-size: 1.4rem;
+  color: #fff;
+  transform: rotate(-2turn);
+  transition: transform 600ms ease-out;
+}
+.dish:hover .checker {
+  transform: translateX(0);
+  transition: transform 500ms ease-in-out;
+}
+.dish:hover .dish__container {
+  flex-shrink: 1;
+}
+.dish:hover span {
+  padding-right: 15px;
+}
+.dish:hover .fa-check-circle {
+  transform: rotateX(0);
 }
 
 .header--menu-page i {
