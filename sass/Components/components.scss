@@ -116,6 +116,8 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    opacity: 0;
+    animation: loading-btn 1000ms forwards;
     
     .dish__container{
         width: 100%;
@@ -171,6 +173,31 @@
            transform: rotateX(0);
           
        }
+        
+    }
+}
+
+.menu__container{
+   
+    @for $i from 1 through 3 {
+        div:nth-child(#{$i}){
+            animation-delay: 150ms * $i;
+            
+        }
+    }
+}
+
+
+@keyframes loading-btn{
+    0%{
+        opacity: 0;
+        transform: translateY(25px);
+        
+        
+    }
+    100%{
+       opacity: 1; 
+       transform: translateY(0px);
         
     }
 }
