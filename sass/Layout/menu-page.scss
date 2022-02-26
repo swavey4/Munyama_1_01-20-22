@@ -39,11 +39,32 @@
             align-items: center;
             font-family: $header-font;
 
+            &-icon{
+                position: relative;
+
+                
             i{
                 font-size: 1.3rem;
-                
-                
+    
             }
+
+            .far{
+                color: black;
+            }
+    
+            .fas{
+                position: absolute;
+                z-index: 2;
+                color: $primary-color;
+                opacity: 0;
+    
+                &:hover{
+                    animation: opaqueefx 600ms 50ms ease-in forwards;
+                }
+            }
+
+            }
+
         }
 
         
@@ -76,5 +97,9 @@
     &__btn{
         @include primary-btn(11.62rem);
         margin: 0 auto;
+
+        &:hover{
+            box-shadow: 1px 3px 9px 4px #bbbbbb;
+        }
     }
 }

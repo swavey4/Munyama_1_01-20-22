@@ -4,6 +4,10 @@
 .btn {
     @include primary-btn; 
 
+    &:hover{
+        box-shadow: 1px 3px 9px 4px #bbbbbb;
+    }
+
     &__text{
         color: #fff;
         font-weight: 600;
@@ -56,6 +60,11 @@
                 white-space: pre-wrap;
             }
         }
+
+        &:hover{
+           background-color: lighten($light-grey, 1%);
+           box-shadow:  4px 4px 9px 4px $dark-grey;
+        }
     }
 
 }
@@ -67,6 +76,10 @@
     width: 100%;
     background-color: #fff;
     box-shadow: $primary-shadow;
+
+    &__icon{
+        position: relative; 
+    }
 
     &__img{
         height: 10.87rem;
@@ -96,8 +109,22 @@
         }
 
         &-icon{
-            color: black;
             font-size: 1.5rem;
+            
+        }
+        .far{
+            color: black;
+        }
+
+        .fas{
+            position: absolute;
+            z-index: 2;
+            color: $primary-color;
+            opacity: 0;
+
+            &:hover{
+                animation: opaqueefx 600ms 50ms ease-in forwards;
+            }
         }
     }
 }
@@ -199,5 +226,14 @@
        opacity: 1; 
        transform: translateY(0px);
         
+    }
+}
+
+@keyframes opaqueefx{
+    0%{
+        opacity: 0
+    }
+    100%{
+        opacity: 1;
     }
 }

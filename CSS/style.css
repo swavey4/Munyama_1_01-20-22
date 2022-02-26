@@ -19,6 +19,74 @@ a {
   margin: 0;
 }
 
+body {
+  position: relative;
+}
+
+.load-container {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(350deg, #a26de2 9%, #ff79da 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  animation: cont 3s cubic-bezier(0.42, 0.13, 0.78, 1.17);
+}
+
+.loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0px 5px 18px 10px #fff;
+  animation: load-rotate 3s linear infinite both;
+}
+.loader span:nth-child(2) {
+  border-radius: 44% 56% 39% 61%/37% 35% 65% 63%;
+  box-shadow: 0px 18px 20px 2px #D47AE8;
+  animation-direction: normal;
+}
+.loader span:nth-child(3) {
+  border-radius: 37% 63% 71% 29%/44% 39% 61% 56%;
+  box-shadow: 0px 8px 30px 4px #79018C;
+  animation-direction: normal;
+}
+.loader span:nth-child(4) {
+  border-radius: 62% 38% 51% 49%/42% 42% 58% 58%;
+  box-shadow: 2px 15px 49px 12px black;
+  animation-direction: alternate-reverse;
+}
+.loader span:nth-child(5) {
+  border-radius: 67% 33% 57% 43%/45% 61% 39% 55%;
+  box-shadow: 2px 10px 59px 22px #D47AE8;
+  animation-direction: normal;
+}
+.loader span:nth-child(6) {
+  border-radius: 67% 33% 66% 34%/36% 70% 30% 64%;
+  box-shadow: 2px 6px 69px 2px #AA14F0;
+  animation-direction: normal;
+}
+
+.container--efx {
+  animation: load-content 0ms 2s ease-in both;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .header {
   height: 3.9rem;
   display: flex;
@@ -120,6 +188,30 @@ a {
   margin-bottom: 8px;
 }
 
+@keyframes load-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load-content {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes cont {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .btn {
   display: flex;
   align-items: center;
@@ -133,6 +225,9 @@ a {
   box-shadow: 1px 3px 9px 1px #bbbbbb;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+}
+.btn:hover {
+  box-shadow: 1px 3px 9px 4px #bbbbbb;
 }
 .btn__text {
   color: #fff;
@@ -189,12 +284,19 @@ a {
   font-size: 0.75rem;
   white-space: pre-wrap;
 }
+.interaction__btn:hover {
+  background-color: #f9f9f9;
+  box-shadow: 4px 4px 9px 4px #eaeaea;
+}
 
 .rest-card {
   border-radius: 15px 15px 15px 15px;
   width: 100%;
   background-color: #fff;
   box-shadow: 1px 3px 9px 1px #bbbbbb;
+}
+.rest-card__icon {
+  position: relative;
 }
 .rest-card__img {
   height: 10.87rem;
@@ -222,8 +324,19 @@ a {
   font-weight: 100;
 }
 .rest-card__container-icon {
-  color: black;
   font-size: 1.5rem;
+}
+.rest-card__container .far {
+  color: black;
+}
+.rest-card__container .fas {
+  position: absolute;
+  z-index: 2;
+  color: #9356DC;
+  opacity: 0;
+}
+.rest-card__container .fas:hover {
+  animation: opaqueefx 600ms 50ms ease-in forwards;
 }
 
 .dish {
@@ -312,6 +425,14 @@ a {
     transform: translateY(0px);
   }
 }
+@keyframes opaqueefx {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header--menu-page i {
   position: relative;
   right: 64px;
@@ -342,8 +463,23 @@ a {
   align-items: center;
   font-family: "Shrikhand", sans-serif;
 }
-.menu-page__container-header i {
+.menu-page__container-header-icon {
+  position: relative;
+}
+.menu-page__container-header-icon i {
   font-size: 1.3rem;
+}
+.menu-page__container-header-icon .far {
+  color: black;
+}
+.menu-page__container-header-icon .fas {
+  position: absolute;
+  z-index: 2;
+  color: #9356DC;
+  opacity: 0;
+}
+.menu-page__container-header-icon .fas:hover {
+  animation: opaqueefx 600ms 50ms ease-in forwards;
 }
 
 .menu {
@@ -381,6 +517,9 @@ a {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin: 0 auto;
+}
+.menu__btn:hover {
+  box-shadow: 1px 3px 9px 4px #bbbbbb;
 }
 
 /*# sourceMappingURL=style.css.map */
