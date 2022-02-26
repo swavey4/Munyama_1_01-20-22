@@ -20,6 +20,16 @@
     @include center-element(center, flex-start, column);
     width: 100%;
     gap: 1.5rem;
+    // Breakpoint
+    @include tablet {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     &__btn{
         box-sizing: border-box;

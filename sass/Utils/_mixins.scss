@@ -22,3 +22,15 @@
     font-family: $text-font;
     font-weight: 500;
 }
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, tablet)) and (min-width: 650px){
+        @content
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content
+    }
+}
