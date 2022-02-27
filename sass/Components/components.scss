@@ -156,6 +156,9 @@
     opacity: 0;
     animation: loading-btn 1000ms forwards;
     
+
+
+
     .dish__container{
         width: 100%;
         flex-shrink: 0;
@@ -166,6 +169,14 @@
         justify-content: space-between;
         margin-top: 0.25rem;
         font-weight: 100;
+        
+        p{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 260px;
+        }
+  
 
         span{
             font-weight: 500;
@@ -210,6 +221,18 @@
            transform: rotateX(0);
           
        }
+
+       .sub-para{
+           p{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 250px;
+           }
+        
+       }
+
+      
         
     }
 }

@@ -2,10 +2,11 @@
 
 .header{
     &--menu-page{
-       i{
+       a{
            position: relative;
            right: 64px;
            font-size: 1.2rem;
+           color: black;
 
            @include tablet{
                right: 30%;

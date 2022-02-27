@@ -405,6 +405,12 @@ body {
   margin-top: 0.25rem;
   font-weight: 100;
 }
+.dish .sub-para p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 260px;
+}
 .dish .sub-para span {
   font-weight: 500;
   color: #353535;
@@ -441,6 +447,12 @@ body {
 .dish:hover .fa-check-circle {
   transform: rotateX(0);
 }
+.dish:hover .sub-para p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 250px;
+}
 
 .menu__container div:nth-child(1) {
   animation-delay: 150ms;
@@ -470,18 +482,19 @@ body {
     opacity: 1;
   }
 }
-.header--menu-page i {
+.header--menu-page a {
   position: relative;
   right: 64px;
   font-size: 1.2rem;
+  color: black;
 }
 @media screen and (max-width: 950px) and (min-width: 650px) {
-  .header--menu-page i {
+  .header--menu-page a {
     right: 30%;
   }
 }
 @media screen and (min-width: 950px) {
-  .header--menu-page i {
+  .header--menu-page a {
     right: 35%;
   }
 }
